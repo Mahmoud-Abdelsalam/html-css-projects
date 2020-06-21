@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+/*  With box-sizing: border-box;, we can change the box model to what was once the “quirky” way, where an element’s specified width and height aren’t affected by padding or borders.*/
+    box-sizing: border-box;
+}
+
+html {
+    
+    background-color: #fff;
+    color: #2f2f2f;
+    font-family: "Lato","Arial",sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+/* text-rendering property in CSS allows you to choose quality of text over speed (or vice versa) allowing you to fine tune optimization by suggesting to the browser as to how it should render text on the screen.*/
+    text-rendering: optimizeLegibility;
+    
+}
+
+/*initialize class row and centering it*/
+.row{
+    max-width: 1140px;
+/* margin right and left auto top and bottom to 0*/
+    margin: 0 auto 0 auto;
+}
+
+header{
+/* WE can use the linear gradient here with the image to overlay it with a dark layer   */
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)),url(../../resources/img/hero.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 200%;
+    font-weight: 300;
+    text-transform: uppercase;
+    word-spacing: 5px;
+}
+
+.hero-text-box {
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* link here is for the normal state before the link is clicked*/
+/*visited is the same as link in styling because we need  the same styling after the link is visited*/
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 390;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+    transition: background-color 0.6s,color 0.6s;
+}
+
+
+.btn-full:link,
+.btn-full:visited{
+    background-color:#e67e22;
+     border: 2px solid #e67e22;
+    color: #fff;
+    margin-right: 20px;
+    
+    
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 2px solid #e67e22;
+    color: #e67e22;
+    
+}
+
+
+.btn:hover,
+.btn:active {
+    background-color: #bf6516;
+    color: #fff;
+    border: 2px solid #bf6516;
+}
