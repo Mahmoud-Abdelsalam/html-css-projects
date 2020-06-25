@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--Adding ionic icons to use it's icons-->
-<link rel="stylesheet" href="/vendors/css/ionicons.min.css">
+
 <!-- Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.-->
   <link rel="stylesheet" href="vendors/css/normalize.css">
-<!-- Gride file helps us with the responsiveness of our site by griding the page to rows and cols -->
-  <link rel="stylesheet" href="vendors/css/grid.css">
+<!-- boot strap file -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--Adding ionic icons to use it's icons-->
+<link rel="stylesheet" href="/vendors/css/ionicons.min.css">
 <!--  Include our local css style sheet-->
    <link rel="stylesheet" href="resources/css/style.css">
 <!--   Google font we will use-->
@@ -28,7 +29,7 @@ NAVBAR
 ---------------------------------------
 -->
    <nav>
-       <div class="row">
+       <div class="row-main">
           <img src="/resources/img/logo-white.png" alt="">
            <ul class="main-nav">
                <li><a href="#">Food delivery</a></li>
@@ -56,27 +57,27 @@ FEATURE SECTION
 ---------------------------------------    
 -->
 <section class="section-features">
-    <div class="row">
+    <div class="row-main">
         <h2>Get food fast &mdash; not fast food.</h2>
         <p class="long-copy">Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!</p>
     </div>
     <div class="row">
-        <div class="col span-1-of-4 box ">
+        <div class="col col-md-3 box ">
            <i class="ion-ios-infinite-outline big-icon"></i>
             <h3>Up to 365 days/year</h3>
             <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
         </div>
-        <div class="col span-1-of-4 box ">
+        <div class="col col-md-3 box ">
            <i class="ion-clock big-icon"></i>
             <h3>Ready in 20 minutes</h3>
             <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
         </div>
-        <div class="col span-1-of-4 box">
+        <div class="col col-md-3 box">
            <i class="ion-ios-nutrition-outline big-icon"></i>
             <h3>100% organic</h3>
             <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
         </div>
-        <div class="col span-1-of-4 box">
+        <div class="col col-md-3 box">
            <i class="ion-ios-cart-outline big-icon"></i>
             <h3>Order anything</h3>
             <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!</p>
@@ -91,7 +92,7 @@ MEALS SECTION
 -->
 
 <section class="meals-section">
-    <ul class="meals-showcase">
+    <ul class="meals-showcase clearfix">
         <li>
             <figure class="meal-photo">
                 <img src="/resources/img/1.jpg" alt="Korean bibimbap with egg and vegetables">
@@ -113,7 +114,7 @@ MEALS SECTION
             </figure>
         </li>
     </ul>
-     <ul class="meals-showcase">
+     <ul class="meals-showcase clearfix">
         <li>
             <figure class="meal-photo">
                 <img src="/resources/img/5.jpg" alt="Paleo beef steak with vegetables">
@@ -137,6 +138,260 @@ MEALS SECTION
     </ul>
 </section>
 
+<!--
+---------------------------------------
+HOW IT WORKS SECTION
+---------------------------------------    
+-->
+<section class="steps-section">
+   <div class="row-main">
+       <h2>
+           How it works &mdash; Simple as 1, 2, 3
+       </h2>
+   </div>
+   <div class="row">
+       <div class="col-md-6 steps-box">
+           <img src="/resources/img/app-iPhone.png" class="app-screen" alt="app on iphone">
+       </div>
+       <div class="col-md-6 steps-box">
+           <div class="work-steps">
+               <div>1</div>
+               <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+           </div>
+           <div class="work-steps">
+               <div>2</div>
+               <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+           </div>
+           <div class="work-steps">
+               <div><p>3</p></div>
+               <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
+           </div>
+           <div class="download-btn">
+                <a href="#" ><img src="/resources/img/download-app-android.png" alt="android store" class="btn-app"></a>
+           <a href="#" ><img src="/resources/img/apple%20stor.png" alt="apple store" class="btn-app"></a>
+           </div>
+          
+       </div>
+   </div>
+    
+</section>
 
+<!--
+---------------------------------------
+CITIES SECTION
+---------------------------------------    
+-->
+
+<section class="cities-section">
+    <div class="row-main">
+        <h2>We're currently in these cities</h2>
+    </div>
+    
+
+    <div class="row-main clearfix">
+       <!-- LISBON   -->
+        <div class="col-md-3 box">
+           <img src="/resources/img/lisbon-3.jpg" alt="">
+            <h3>Lisbon</h3>
+            <div class="city-features">
+                <i class="ion-person"></i>
+                1600+ happy eaters
+            </div>
+            <div class="city-features">
+                <i class="ion-star"></i>
+                60+ top chefs
+            </div>
+            <div class="city-features">
+                <i class="ion-social-twitter"></i>
+                @omnifood_lx
+            </div>
+        </div>
+        
+        <!-- San Francisco   -->
+        <div class="col-md-3 box">
+           <img src="/resources/img/san-francisco.jpg" alt="">
+            <h3>San Francisco</h3>
+            <div class="city-features">
+                <i class="ion-person"></i>
+                3700+ happy eaters
+            </div>
+            <div class="city-features">
+                <i class="ion-star"></i>
+                160+ top chefs
+            </div>
+            <div class="city-features">
+                <i class="ion-social-twitter"></i>
+                @omnifood_sf
+            </div>
+        </div>
+        
+        <!-- Berlin   -->
+        <div class="col-md-3 box">
+           <img src="/resources/img/berlin.jpg" alt="">
+            <h3>Berlin</h3>
+            <div class="city-features">
+                <i class="ion-person"></i>
+                2300+ happy eaters
+            </div>
+            <div class="city-features">
+                <i class="ion-star"></i>
+               110+ top chefs
+            </div>
+            <div class="city-features">
+                <i class="ion-social-twitter"></i>
+                @omnifood_berlin
+            </div>
+        </div>
+        
+        <!-- London   -->
+        <div class="col-md-3 box">
+           <img src="/resources/img/london.jpg" alt="">
+            <h3>London</h3>
+            <div class="city-features">
+                <i class="ion-person"></i>
+                1200+ happy eaters
+            </div>
+            <div class="city-features">
+                <i class="ion-star"></i>
+                50+ top chefs
+            </div>
+            <div class="city-features">
+                <i class="ion-social-twitter"></i>
+                @omnifood_london
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--
+---------------------------------------
+TESTOMONIALS SECTION
+---------------------------------------    
+-->
+
+<section class="testomonials-section">
+    <div class="row-main">
+        <h2>Our customers can't live without us</h2>
+    </div>
+    <div class="row">
+       <div class="col-md-4 customer-quote">
+         
+           <blockquote>
+               Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+           </blockquote>
+           <cite><img src="/resources/img/customer-1.jpg" alt=""> &mdash; (Sera Alberto)</cite>
+       </div>
+        <div class="col-md-4 customer-quote">
+      
+           <blockquote>
+              Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
+           </blockquote>
+           <cite><img src="/resources/img/customer-2.jpg" alt=""> &mdash; (Joana Silva)</cite>
+       </div>
+       <div class="col-md-4 customer-quote">
+   
+           <blockquote>
+               I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
+           </blockquote>
+           
+           <cite><img src="/resources/img/customer-3.jpg" alt=""> &mdash; (Milton Chapman)</cite>
+       </div>
+    </div>
+</section>
+
+<!--
+---------------------------------------
+PLANS SECTION
+---------------------------------------    
+-->
+
+
+<section class="plans-section">
+    <div class="row-main">
+        <h2>Start eating healthy today</h2>
+    </div>
+    <div class="row">
+       
+        <!-- PREMUIM -->
+        <div class="col-md-4 plan-type">
+            <div class="plan-box">
+              <div class="half-card">
+               <h3>Premium </h3>
+               <p class="plan-type-month">
+                   <span>$399</span>/ month
+               </p> 
+               <p class="plan-type-meal">
+                   That’s only 13.30$ per meal
+               </p>
+             </div>
+            <div>
+                <ul class="plan-list">
+                    <li><i class="ion-android-done"></i>1 meal every day</li>
+                    <li><i class="ion-android-done"></i>Order 24/7</li>
+                    <li><i class="ion-android-done"></i>Access to newest creations</li>
+                    <li><i class="ion-android-done"></i>Free delivery</li>
+                </ul>
+                 <div class="btn-plan">
+                    <a href="#" class="btn btn-full" >Sign Up Now</a>
+                 </div>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Pro -->
+        <div class="col-md-4 plan-type">
+            <div class="plan-box">
+              <div class="half-card">
+               <h3>Pro </h3>
+               <p class="plan-type-month">
+                  <span>$149</span>/ month
+               </p> 
+               <p class="plan-type-meal">
+                  That’s only 14.90$ per meal
+               </p>
+             </div>
+               
+            <div>
+                <ul class="plan-list">
+                    <li><i class="ion-android-done"></i>1 meal 10 days/month</li>
+                    <li><i class="ion-android-done"></i>Order 24/7</li>
+                    <li><i class="ion-android-done"></i>Access to newest creations</li>
+                    <li><i class="ion-android-done"></i>Free delivery</li>
+                </ul>
+                 <div class="btn-plan">
+                    <a href="#" class="btn btn-ghost">Sign Up Now</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Starter -->
+        <div class="col-md-4 plan-type">
+           <div class="plan-box">
+            <div class="half-card">
+               <h3>Starter </h3>
+               <p class="plan-type-month">
+                  <span>$19</span>/ meal
+               </p> 
+               <p class="plan-type-meal">
+                   That’s only 19$ per meal
+               </p>
+             </div>
+            <div>
+                <ul class="plan-list">
+                    <li><i class="ion-android-done"></i>1 meal every day</li>
+                    <li><i class="ion-android-done"></i>Order from 8 am to 12 pm</li>
+                    <li><i class="ion-android-close"></i></li>
+                    <li><i class="ion-android-done"></i>Free delivery</li>
+                </ul>
+                <div class="btn-plan">
+                    <a href="#" class="btn btn-ghost">Sign Up Now</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>

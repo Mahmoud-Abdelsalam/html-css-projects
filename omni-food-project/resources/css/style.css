@@ -19,6 +19,14 @@ html {
     text-rendering: optimizeLegibility;
     
 }
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 
 /*---------------------------------------*/
 /*HEADER SECTION*/
@@ -57,8 +65,13 @@ nav img {
     margin-left: 50px;
     font-size: 90%;
     list-style: none;
+    transition: transform 0.5s;
+   
 }
-
+.main-nav li:hover {
+     transform: scale(1.2);
+}
+    
 .main-nav li a:link,
 .main-nav li a:visited {
     text-decoration: none;
@@ -74,22 +87,29 @@ nav img {
     color: #fff;
     border-bottom: 2px solid #e67e22;
     transition: border-bottom 0.5s;
+    
    
     
     
 }
+/*---------------------------------------*/
+/*FEATURE SECTION*/
+/*---------------------------------------*/
 
 /*---------------------------------------*/
 /*MEALS SECTION*/
 /*---------------------------------------*/
 
 .meals-section {
-    padding: 100px 0 ;
+    padding: 0 0 ;
+    margin-top: 80px;
 }
 
 .meals-showcase {
     width: 100%;
     list-style: none;
+    margin-bottom: 0;
+    
         
 }
 
@@ -97,6 +117,7 @@ nav img {
     display: block;
     float: left;
     width:25%;
+    height: 100%;
   
         
 }
@@ -111,7 +132,7 @@ nav img {
 
 .meal-photo img {
     width: 100%;
-    height: auto;
+    height: 100%;
     transform: scale(1.15);
     opacity: 0.6;
     transition: transform 0.5s, opacity 0.5s;
@@ -123,10 +144,225 @@ nav img {
 }
 
 /*---------------------------------------*/
+/*HOW IT WORKS SECTION*/
+/*---------------------------------------*/
+
+.steps-section{
+    background-color: #efeded;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.app-screen {
+    float: right;
+    margin-right: 30px;
+    height: 700px;
+    width: 350px;
+}
+.work-steps:first-child{
+    margin-top: 130px;
+}
+.work-steps {
+    margin-bottom: 60px;
+}
+.work-steps div {
+    display: inline-block;
+    border :2px solid #e67e22;
+    color: #e67e22;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 110%;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px;
+   
+    
+}
+.btn-app{
+    height: 50px;
+    width: auto;
+    padding-right: 15px;
+    margin-top: 30px;
+    
+}
+.download-btn {
+    width:70%;
+    margin-left: 25%;
+}
+
+/*---------------------------------------*/
+/*CITIES SECTION*/
+/*---------------------------------------*/
+
+.cities-section {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.cities-section .box {
+    padding: 15px;
+    float: left;
+    border-radius: 30px;
+    transition: background-color 0.3s,transform 0.3s;
+   
+}
+.cities-section .box:hover {
+    background-color: #e67e22;
+    color: #fff;
+    transform: scale(1.02);
+    overflow: hidden;
+    
+}
+
+ .cities-section .box img {
+    height: 300px;
+    width: 100%;
+    border-radius: 20px;
+    
+}
+
+.city-features {
+    width: 80%;
+    font-size: 80%;
+    margin-left: 10%;
+    margin-bottom: 7px;
+    
+}
+.city-features i {
+    margin-right: 15px;
+   
+}
+
+.cities-section .box div {
+    font-size: 60%;
+    font-weight: 500;
+}
+
+/*---------------------------------------*/
+/*TESTOMONIALS SECTION*/
+/*---------------------------------------*/
+
+.testomonials-section {
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/resources/img/back-customers.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color:#fff;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.customer-quote{
+    padding: 20px;
+}
+.customer-quote span {
+    font-size: 400%;
+    
+}
+
+.testomonials-section img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.testomonials-section cite{
+    font-size: 80%;
+}
+.testomonials-section blockquote:before {
+    content: "\201C";
+    font-size: 300%;
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    
+}
+.testomonials-section blockquote {
+    font-style: italic;
+    margin-bottom: 40px;
+    font-size: 85%;
+    position: relative;
+    line-height: 200%;
+    padding: 2%;
+}
+
+/*---------------------------------------*/
+/*PLANS SECTION*/
+/*---------------------------------------*/
+
+.plans-section {
+    background-color: #e8e8e8;
+    padding-top: 80px;
+    padding-bottom: 120px;
+   
+}
+
+.plan-box {
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    vertical-align: middle;
+    
+    
+}
+
+.plan-box p {
+    font-size: 80%
+}
+.plans-section ul {
+    list-style: none;
+    font-size: 90%;
+    margin-left: 20px;
+}
+
+.plans-section i {
+    color: #e67e22;
+    margin-right: 20px;
+}
+
+.btn-plan {
+    text-align: center;
+    border-top: 0.1px solid #d6d6d6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.plans-section .half-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.plan-box .plan-type-meal {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    
+    border-bottom: 0.1px solid #d6d6d6;
+}
+.plans-section .plan-list {
+    margin-top: 30px;
+    font-size: 80%;
+    font-weight: 500;
+    line-height: 50px;
+}
+.plan-type-month, .plan-type-month span  {
+    font-size: 400%;
+    margin-left: 20px;
+    color: #e67e22;
+    
+}
+.plan-type-meal {
+    padding-left: 40px;
+}
+.plans-section h3 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+/*---------------------------------------*/
 /*REUSABLE COMPONENTS*/
 /*---------------------------------------*/
 /*initialize class row and centering it*/
-.row{
+.row-main{
     max-width: 1140px;
 /* margin right and left auto top and bottom to 0*/
     margin: 0 auto 0 auto;
@@ -184,7 +420,7 @@ h3 {
     display: block;
     font-size: 250%;
     color: #e67e22;
-    margin-left: 90px;
+    margin-left: 40%;
     
 }
 
@@ -247,5 +483,7 @@ h3 {
     font-size: 70%;
     line-height: 35px;
     font-weight: 400;
+    width: 80%;
+    margin-left: 15%;
     
 }
