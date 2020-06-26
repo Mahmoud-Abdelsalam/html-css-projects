@@ -1,0 +1,70 @@
+h1 {font-size: 230%;}
+h2 {font-size:145%;}
+.meals-showcase li {width: 25%;}
+.steps-section .app-screen {
+    height: 700px;
+    width: 350px;
+}
+.work-steps {
+    margin-bottom: 80px;
+    font-size: 100%;
+ 
+}
+
+.work-steps div {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+/* small phone screens 0 => 479*/
+@media  screen and (max-width: 479px){
+    .meals-showcase li {width: 50%;}
+  .steps-section .app-screen {
+    height: 300px;
+    width: 250px;}
+    .work-steps {
+    margin-bottom: 80px;
+    font-size: 80%;}
+    .work-steps div {
+    margin-bottom: 40px;
+}
+    
+     h1 {font-size: 120%;}
+     h2 {font-size:100%;}
+}
+
+
+/*  phone screens and ipad 480 => 767 */
+@media  screen and (max-width: 767px){
+     
+    .meals-showcase li {width: 50%;}
+    .steps-section .app-screen {
+    height: 400px;
+    width: 200px;
+    margin-right: 50px; }
+     .work-steps {
+    margin-bottom: 40px;
+    font-size: 80%;}
+    .work-steps div {
+    margin-bottom: 40px;}
+    
+
+}
+/*small tablets to big tablets 767 => 1023*/
+@media  screen and (max-width: 1023px){
+ .meals-showcase li {width: 50%;} 
+  h1 {font-size: 150%;}
+      h2 {font-size:100%;}
+    
+}
+/*big tablets and computers our row width = 1140 so its smaller than this value*/
+
+@media screen and (max-width: 1200px){
+        
+    
+    
+}

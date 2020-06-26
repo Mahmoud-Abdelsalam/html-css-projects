@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
 /*  With box-sizing: border-box;, we can change the box model to what was once the “quirky” way, where an element’s specified width and height aren’t affected by padding or borders.*/
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -28,36 +29,56 @@ html {
     visibility: hidden;
 }
 
+
 /*---------------------------------------*/
 /*HEADER SECTION*/
 /*---------------------------------------*/
 
 header{
 /* WE can use the linear gradient here with the image to overlay it with a dark layer   */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.7))),url(../../resources/img/hero.jpg);
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)),url(../../resources/img/hero.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 150px;
+    height: 900px;
+    
+}
+.hero-text-box {
+    margin-top: 220px;
+   position: static;
     
 }
 
-.hero-text-box {
-    width: 1140px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.welcome {
+    margin-right: 1px;
+    padding-left: 200px;
 }
 
-nav img {
+
+/*Main-nav*/
+
+
+.nav-header {
+   
+
+}
+
+.logo {
     height: 120px;
     width: auto;
     float: left;
-    margin-top: 20px;
+    margin-top: 10px;
+
 }
+.logo-black {display: none;}
+
 .main-nav {
     float:right;
     margin-top: 50px;
+    margin-left: 60px;
 }
 
 .main-nav li {
@@ -65,10 +86,14 @@ nav img {
     margin-left: 50px;
     font-size: 90%;
     list-style: none;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
    
 }
 .main-nav li:hover {
+     -webkit-transform: scale(1.2);
      transform: scale(1.2);
 }
     
@@ -78,7 +103,7 @@ nav img {
     color: #fff;
     padding: 10px 0 ;
     border-bottom: 2px solid transparent;
-    text-transform: capitalize;
+    text-transform: uppercase;
     
 }
 .main-nav li a:hover,
@@ -86,12 +111,52 @@ nav img {
     text-decoration: none;
     color: #fff;
     border-bottom: 2px solid #e67e22;
+    -webkit-transition: border-bottom 0.5s;
     transition: border-bottom 0.5s;
     
-   
-    
+}
+
+
+/*sticky nav*/
+
+.sticky {
+    background-color: rgba(235, 235, 235, 0.86);
+    position: fixed;    
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 100px;
+    box-shadow: 0 2px 2px #939393;
+    z-index: 1000;
+}
+
+.logo-black {
+    height: 80px;
+    width: auto;
+    float: left;
+    margin-top: 10px;
+    margin-left: 160px;
+    margin-bottom: 8px;
+
+}
+.sticky .logo {display: none;}
+.sticky .logo-black {display: block;}
+.main-nav {
+    float:right;
+    margin-top: 25px;
     
 }
+
+
+
+    
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    color: #000;
+    padding: 26px 0 ;
+   
+}
+
 /*---------------------------------------*/
 /*FEATURE SECTION*/
 /*---------------------------------------*/
@@ -133,12 +198,17 @@ nav img {
 .meal-photo img {
     width: 100%;
     height: 100%;
+    -webkit-transform: scale(1.15);
     transform: scale(1.15);
     opacity: 0.6;
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 .meal-photo img:hover {
     opacity: 1;
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
     
 }
@@ -154,15 +224,18 @@ nav img {
 }
 .app-screen {
     float: right;
-    margin-right: 30px;
     height: 700px;
     width: 350px;
+    
 }
+
 .work-steps:first-child{
     margin-top: 130px;
 }
 .work-steps {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+    font-size: 100%;
+ 
 }
 .work-steps div {
     display: inline-block;
@@ -176,7 +249,7 @@ nav img {
     float: left;
     margin-right: 15px;
     margin-top: 15px;
-   
+    margin-bottom: 101px;
     
 }
 .btn-app{
@@ -204,12 +277,16 @@ nav img {
     padding: 15px;
     float: left;
     border-radius: 30px;
+    -webkit-transition: background-color 0.3s,-webkit-transform 0.3s;
+    transition: background-color 0.3s,-webkit-transform 0.3s;
     transition: background-color 0.3s,transform 0.3s;
-   
+    transition: background-color 0.3s,transform 0.3s,-webkit-transform 0.3s;
+    margin-bottom: 30px;
 }
 .cities-section .box:hover {
     background-color: #e67e22;
     color: #fff;
+    -webkit-transform: scale(1.02);
     transform: scale(1.02);
     overflow: hidden;
     
@@ -244,7 +321,8 @@ nav img {
 /*---------------------------------------*/
 
 .testomonials-section {
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/resources/img/back-customers.jpg);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.8)),to(rgba(0,0,0,0.8))),url(../../resources/img/back-customers.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../../resources/img/back-customers.jpg);
     background-size: cover;
     background-attachment: fixed;
     color:#fff;
@@ -273,6 +351,7 @@ nav img {
     display: block;
     position: absolute;
     top: 0;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     
 }
@@ -358,6 +437,104 @@ nav img {
     margin-bottom: 0;
     padding-bottom: 0;
 }
+
+/*---------------------------------------*/
+/*FORM SECTION*/
+/*---------------------------------------*/
+.contact-section {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.contact-form {
+    margin-top: 100px;
+    font-size: 80%;
+    margin-left: 120px
+}
+.form-item {
+    margin-bottom: 20px;
+}
+.form-item label {
+    margin-left: 40px;
+   font-weight: 500;
+}
+
+.form-item .name,.email {
+    width: 70%;
+    height: 110%
+}
+
+.form-item select {
+    width: 70%;
+    background-color: #f0f0f0;
+}
+.form-item textarea {
+    width: 70%;
+}
+.form-item .name,
+.form-item .email,
+.form-item select,
+.form-item textarea {
+    padding: 7px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.form-btn {
+    margin-left: 70px;
+}
+
+.checkbox {
+   margin-left:40px; 
+}
+*:focus {outline: none;}
+
+/*---------------------------------------*/
+/*----FOOTER---*/
+/*---------------------------------------*/
+footer {
+    background-color: #2f2f2f;
+    color: #8b8b8b;
+    padding: 50px 20px 0  20px
+}
+
+footer ul {
+    list-style: none;
+    
+}
+
+footer li {
+    float: left;
+    margin-left: 40px;
+}
+
+footer .nav-items {
+    float: left;
+    font-size: 70%;
+    margin-left: 50px;
+    
+}
+
+footer .nav-social {
+    float: right;
+    margin-right: 80px;
+}
+footer .footer-p {
+    margin-top: 50px;
+    font-size: 70%;
+    margin-bottom: 30px;
+}
+footer i {
+    color:#8b8b8b;
+}
+footer i:hover {
+    color: #dddddd;
+}
+footer a {
+    color:#8b8b8b;
+}
+footer a:hover {
+    text-decoration: none;
+}
 /*---------------------------------------*/
 /*REUSABLE COMPONENTS*/
 /*---------------------------------------*/
@@ -381,8 +558,9 @@ h1 {
     color: white; 
      margin-top: 0;
      margin-bottom: 20px;
-     font-size: 200%;
-      word-spacing: 5px;
+     font-size: 230%;
+    word-spacing: 5px;
+    
     
 }
 
@@ -436,6 +614,7 @@ h3 {
     text-decoration: none;
     color: white;
     border-radius: 50px;
+    -webkit-transition: background-color 0.6s,color 0.6s;
     transition: background-color 0.6s,color 0.6s;
 }
 
@@ -446,6 +625,7 @@ h3 {
      border: 2px solid #e67e22;
     color: #fff;
     margin-right: 20px;
+    margin-bottom: 30px;
     
     
 }
@@ -453,9 +633,9 @@ h3 {
 .btn-ghost:visited{
     border: 2px solid #e67e22;
     color: #e67e22;
+    margin-bottom: 30px;
     
 }
-
 
 .btn:hover,
 .btn:active {
