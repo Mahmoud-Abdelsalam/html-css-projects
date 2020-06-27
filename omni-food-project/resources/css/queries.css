@@ -16,9 +16,57 @@ h2 {font-size:145%;}
 }
 
 
+.mobile-nav-icon {
+    display: none;
+}
+
+.main-nav {
+    float: right;
+    margin-left: 45px;
+    margin-top: 50px;
+    display: block;
+}
 
 
+.main-nav li {
+    display: inline-block;
+    margin-left: 50px;
+ 
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+    
+    display: inline-block;
+    padding: 10px 0;
+    
+}
 
+.sticky .main-nav {
+    float: right;
+    margin-left: 45px;
+    margin-top: 50px;
+}
+
+
+.sticky .main-nav li {
+    display: inline-block;
+    margin-left: 50px;
+    
+ 
+}
+
+.sticky .main-nav li{
+    font-size: 70%;
+ 
+}
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    
+    display: inline-block;
+    padding: 10px 0;
+    font-size: 100%;
+    
+}
 
 /* small phone screens 0 => 479*/
 @media  screen and (max-width: 479px){
@@ -35,7 +83,18 @@ h2 {font-size:145%;}
     
      h1 {font-size: 120%;}
      h2 {font-size:100%;}
+    
+    .sticky .main-nav li {
+    font-size: 58%;
 }
+    
+    
+    
+    
+}
+
+    
+ 
 
 
 /*  phone screens and ipad 480 => 767 */
@@ -52,19 +111,95 @@ h2 {font-size:145%;}
     .work-steps div {
     margin-bottom: 40px;}
     
-
+     .sticky .main-nav li {
+    font-size: 58%;
 }
+   
+
+    
+    
+    
+}
+
+
+
+
+
 /*small tablets to big tablets 767 => 1023*/
 @media  screen and (max-width: 1023px){
  .meals-showcase li {width: 50%;} 
   h1 {font-size: 150%;}
       h2 {font-size:100%;}
     
+    .mobile-nav-icon {
+    display: inline-block;
 }
+    .main-nav {
+    float: left;
+    margin-left: 75px;
+    margin-top: 30px;
+    display: none;    
+     
+}
+    
+    .main-nav li {
+    display: block;
+    margin-left: 20px;  
+        
+    
+ 
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+   
+    display: block;
+    padding: 20px 0;
+    
+}
+/*Sticky navbar*/
+   .sticky .mobile-nav-icon {
+    display: inline-block;
+}
+   .sticky .main-nav {
+    float: left;
+    margin-left: 220px;
+    margin-top: 30px;
+     
+}
+    
+  .sticky .main-nav li {
+    display: block;
+    margin-left: 20px;  
+   
+    
+ 
+}
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+   
+    display: block;
+    padding: 20px 0;
+    
+}
+    
+}
+
+
+
+
 /*big tablets and computers our row width = 1140 so its smaller than this value*/
 
 @media screen and (max-width: 1200px){
         
+      .main-nav li {
+    margin-left: 45px;  
+    }
+    .sticky .main-nav li {
+
+    margin-left: 10px;  
+        
     
+ 
+}
     
 }

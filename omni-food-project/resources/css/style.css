@@ -36,19 +36,23 @@ html {
 
 header{
 /* WE can use the linear gradient here with the image to overlay it with a dark layer   */
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.7))),url(../../resources/img/hero.jpg);
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)),url(../../resources/img/hero.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.7))),url(../../resources/img/hero-min.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)),url(../../resources/img/hero-min.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin-bottom: 150px;
-    height: 900px;
+    height: 1000px;
     
 }
 .hero-text-box {
-    margin-top: 220px;
-   position: static;
+    top:50;
+    left:50;
+    width: 100%;
+    position: absolute;
+    transform: translateX();
+    transform: translateY(100%);
     
 }
 
@@ -78,13 +82,14 @@ header{
 .main-nav {
     float:right;
     margin-top: 50px;
-    margin-left: 60px;
+    margin-left: 45px;
+    display: block;
 }
 
 .main-nav li {
     display: inline-block;
-    margin-left: 50px;
-    font-size: 90%;
+    margin-left: 30px;
+    font-size: 80%;
     list-style: none;
     -webkit-transition: -webkit-transform 0.5s;
     transition: -webkit-transform 0.5s;
@@ -92,11 +97,6 @@ header{
     transition: transform 0.5s, -webkit-transform 0.5s;
    
 }
-.main-nav li:hover {
-     -webkit-transform: scale(1.2);
-     transform: scale(1.2);
-}
-    
 .main-nav li a:link,
 .main-nav li a:visited {
     text-decoration: none;
@@ -106,6 +106,12 @@ header{
     text-transform: uppercase;
     
 }
+.main-nav li:hover {
+     -webkit-transform: scale(1.2);
+     transform: scale(1.2);
+}
+    
+
 .main-nav li a:hover,
 .main-nav li a:active {
     text-decoration: none;
@@ -124,17 +130,19 @@ header{
     position: fixed;    
     top: 0;
     left: 0;
-    width: 100%;
-    padding-right: 100px;
+    width: 102%;
+    padding-right: 10px;
+    -webkit-box-shadow: 0 2px 2px #939393;
     box-shadow: 0 2px 2px #939393;
     z-index: 1000;
+    
 }
 
 .logo-black {
     height: 80px;
     width: auto;
     float: left;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: 160px;
     margin-bottom: 8px;
 
@@ -144,19 +152,80 @@ header{
 .main-nav {
     float:right;
     margin-top: 25px;
+
     
 }
 
 
+.sticky .main-nav {
+    float:right;
+    margin-top: 50px;
+    margin-left: 55px;
+}
 
-    
-.sticky .main-nav li a:link,
-.sticky .main-nav li a:visited {
-    color: #000;
-    padding: 26px 0 ;
+.sticky .main-nav li {
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 70%;
+    list-style: none;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
    
 }
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 0 ;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    
+}
+.sticky .main-nav li:hover {
+     -webkit-transform: scale(1.2);
+     transform: scale(1.2);
+}
+    
 
+ .sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid #e67e22;
+    -webkit-transition: border-bottom 0.5s;
+    transition: border-bottom 0.5s;
+    
+}
+
+/*----- Mobile nav icon -----*/
+.mobile-nav-icon {
+   cursor: pointer;
+    float: right;
+    margin-top: 10px;
+    display: none;
+    
+}
+
+.mobile-nav-icon i {
+    color: #fff;
+     font-size: 200%;
+}
+
+/*-----sticky Mobile nav icon -----*/
+.sticky .mobile-nav-icon {
+   cursor: pointer;
+    float: right;
+    margin-top: 10px;
+    display: none;
+    
+}
+
+.sticky .mobile-nav-icon i {
+    color: #000;
+     font-size: 200%;
+}
 /*---------------------------------------*/
 /*FEATURE SECTION*/
 /*---------------------------------------*/
@@ -321,8 +390,8 @@ header{
 /*---------------------------------------*/
 
 .testomonials-section {
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.8)),to(rgba(0,0,0,0.8))),url(../../resources/img/back-customers.jpg);
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../../resources/img/back-customers.jpg);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.8)),to(rgba(0,0,0,0.8))),url(../../resources/img/back-customers-min.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../../resources/img/back-customers-min.jpg);
     background-size: cover;
     background-attachment: fixed;
     color:#fff;
@@ -666,4 +735,49 @@ h3 {
     width: 80%;
     margin-left: 15%;
     
+}
+
+
+
+/*------------ ANIMATIONS -------------*/
+
+.waypoint-fadein {
+   
+    opacity: 0;
+}
+
+
+
+.waypoint-fadein.animate__animated{
+    -webkit-animation: fadeIn;
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s; 
+    opacity: 1;
+/*    transition: opacity 3s;*/
+}
+
+.waypoint-phone {
+    opacity: 0;
+}
+
+.waypoint-phone.animate__animated{
+    -webkit-animation: bounceInUp;
+    animation: bounceInUp; /* referring directly to the animation's @keyframe declaration */
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s; 
+    opacity: 1;
+}
+
+
+.waypoint-cities {
+    opacity: 0;
+}
+
+.waypoint-cities.animate__animated{
+    -webkit-animation: fadeInUp;
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s; 
+    opacity: 1;
 }

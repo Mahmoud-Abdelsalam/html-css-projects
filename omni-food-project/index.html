@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+<!--   Adding animate.css to use animations-->
+
+ <link
+    rel="stylesheet"
+    href="vendors/css/animate.css"
+  />
 <!-- Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.-->
   <link rel="stylesheet" href="vendors/css/normalize.css">
 <!-- boot strap file -->
@@ -12,9 +20,30 @@
    <link rel="stylesheet" href="resources/css/style.css">
 <!--  media queries file for different display screens -->
    <link rel="stylesheet" href="resources/css/queries.css">
+   
+
 <!--   Google font we will use-->
    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
+    
+<!--    Adding fav icons-->
+   <link rel="apple-touch-icon" sizes="57x57" href="resources/favIcons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="resources/favIcons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="resources/favIcons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="resources/favIcons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="resources/favIcons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="resources/favIcons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="resources/favIcons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="resources/favIcons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="resources/favIcons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="resources/favIcons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/favIcons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="resources/favIcons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resources/favIcons/favicon-16x16.png">
+<link rel="manifest" href="resources/favIcons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
     <title>Omnifood</title>
     
 </head>
@@ -31,21 +60,29 @@ NAVBAR
 ---------------------------------------
 -->
  <div class="container">
-  <div class="row nav-header">
-      <div class="col-md-12">
-          <nav class="start-nav">
-       <div class="d-none d-lg-block">
-          <img src="resources/img/logo-white.png" alt="" class="logo">
+  <div class="row nav-header animate__animated animate__bounceInDown">
+     <div class=" col-md-1 col-sm-2">
+         <img src="resources/img/logo-white.png" alt="" class="logo">
           <img src="resources/img/logo.png" class="logo-black" alt="">
-           <ul class="main-nav">
-               <li><a href="#">Food delivery</a></li>
-               <li><a href="#">How it works </a></li>
-               <li><a href="#">Our cities </a></li>
-               <li><a href="#">Sign up</a></li>
+     </div>
+      <div class="  col-md-10 col-sm-7">
+          <nav >
+       <div>
+          
+           <ul class="main-nav js--main-nav">
+               <li><a href="#features">Food delivery</a></li>
+               <li><a href="#steps">How it works </a></li>
+               <li><a href="#cities">Our cities </a></li>
+               <li><a href="#signup">Sign up</a></li>
            </ul>
+          
        </div>
    </nav>
+     
       </div>
+       <div class="col-lg-1 col-md-1 col-sm-3">
+           <a  class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round "></i></a>
+           </div>
   </div>
   </div>
 <!--
@@ -53,12 +90,12 @@ NAVBAR
 WELCOME HEADER SECTION
 ---------------------------------------
 -->
-   <div class="row welcome">
+   <div class="row welcome animate__animated animate__bounce">
        <div class="col-md-10">
            <div class="hero-text-box">
         <h1>Goodbye junk food.<br> Hello super healthy meals.</h1>
-        <a href="#" class="btn btn-full">I’m hungry</a>
-        <a href="#" class="btn btn-ghost">Show me  more</a>
+        <a href="#" class="btn btn-full js--to-plans" >I’m hungry</a>
+        <a href="#" class="btn btn-ghost js--to-start">Show me  more</a>
             </div>  
        </div>
    </div>
@@ -69,13 +106,13 @@ WELCOME HEADER SECTION
 FEATURE SECTION
 ---------------------------------------    
 -->
-<section class="section-features">
+<section class="section-features js-section-features" id="features">
     <div class="row-main">
         <h2>Get food fast &mdash; not fast food.</h2>
         <p class="long-copy">Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!</p>
     </div>
     <div class="container">
-    <div class="row">
+    <div class="row waypoint-fadein">
         <div class="col col-lg-3 col-md-6 col-sm-12  box ">
            <i class="ion-ios-infinite-outline big-icon"></i>
             <h3>Up to 365 days/year</h3>
@@ -160,7 +197,7 @@ MEALS SECTION
 HOW IT WORKS SECTION
 ---------------------------------------    
 -->
-<section class="steps-section">
+<section class="steps-section" id="steps">
   <div class="container">
       <div class="row-main">
        <h2>
@@ -168,7 +205,7 @@ HOW IT WORKS SECTION
        </h2>
    </div>
    <div class="row">
-       <div class="col-md-6 col-sm-10 steps-box">
+       <div class="col-md-6 col-sm-10 steps-box waypoint-phone">
            <img src="resources/img/app-iPhone.png" class="app-screen" alt="app on iphone">
        </div>
        <div class="col-md-6 col-sm-12 steps-box">
@@ -202,14 +239,14 @@ CITIES SECTION
 ---------------------------------------    
 -->
 
-<section class="cities-section">
+<section class="cities-section" id="cities">
    <div class="container">
     <div class="row-main">
         <h2>We're currently in these cities</h2>
     </div>
     
 
-    <div class="row-main clearfix">
+    <div class="row-main clearfix waypoint-cities">
        <!-- LISBON   -->
         <div class="col-md-3 box">
            <img src="resources/img/lisbon-3.jpg" alt="">
@@ -331,7 +368,7 @@ PLANS SECTION
 -->
 
 
-<section class="plans-section">
+<section class="plans-section js--plans-section" id="signup">
     <div class="row-main">
         <h2>Start eating healthy today</h2>
     </div>
@@ -340,7 +377,7 @@ PLANS SECTION
        
         <!-- PREMUIM -->
         <div class="col-md-4 plan-type">
-            <div class="plan-box">
+            <div class="plan-box waypoint-plan">
               <div class="half-card">
                <h3>Premium </h3>
                <p class="plan-type-month">
@@ -481,7 +518,7 @@ CONTACT SECTION
             </div>
             <div class="row form-item">
                <div class="col-md-4">
-                   <label for="button">&nbsp;</label>
+                   <label >&nbsp;</label>
                </div>
                <div class="col-md-8">
                   <a href="#" class="btn btn-full form-btn"> Send </a>
